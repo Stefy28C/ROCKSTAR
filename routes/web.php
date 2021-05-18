@@ -41,7 +41,7 @@ Route::get('arreglos', function () {
 
 Route::get('paises', function () {
     $paises = [
-        "colombia" =>
+        "Colombia" =>
         [
             "capital" => "Bogotá",
             "moneda" => "Pesos",
@@ -56,8 +56,16 @@ Route::get('paises', function () {
             "capital" => "Asunción",
             "moneda" => "Guarani",
             "poblacion" => 7
+        ],
+        "Brasil" => [
+            "capital" => "Rio de Janeiro",
+            "moneda" => "Real brasileño",
+            "poblacion" => 211
         ]
     ];
+    return view('paises')->with("naciones", $paises);
+//mostrar la vista de paises
+    //llevando el arreglo de paises
     /*echo "<pre>";
     print_r($paises["Peru"]["moneda"]);
     echo "<pre>";*/
@@ -73,12 +81,12 @@ Route::get('paises', function () {
     echo"<hr/>";
     }*/
 
-    foreach($paises as $indice=>$valor){
+    /*foreach($paises as $indice=>$valor):
         echo"$indice";
         echo "<pre>";
 
     print_r($valor["capital"]);
     echo "<pre>";
     echo"<hr/>";
-    }
+    endforeach;*/
 });
