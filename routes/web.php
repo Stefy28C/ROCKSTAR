@@ -64,7 +64,9 @@ Route::get('paises', function () {
         ]
     ];
     return view('paises')->with("naciones", $paises);
-//mostrar la vista de paises
+
+
+    //mostrar la vista de paises
     //llevando el arreglo de paises
     /*echo "<pre>";
     print_r($paises["Peru"]["moneda"]);
@@ -90,3 +92,6 @@ Route::get('paises', function () {
     echo"<hr/>";
     endforeach;*/
 });
+Route::get('mostrar_formulario', 'MetabuscadorController@mostrar_formulario');
+
+Route::post('buscar_termino', "MetabuscadorController@buscar_termino");
