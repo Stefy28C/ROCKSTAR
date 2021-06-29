@@ -11,4 +11,10 @@ class Cliente extends Model
     protected $primaryKey = "CustomerId";
     public $timestamps = false;
 
+        //RELACIÓN 1:M CON COMPRA
+
+        public function compras(){
+            return $this->hasMany('App\Compra','CustomerId');
+        }
+
 }
